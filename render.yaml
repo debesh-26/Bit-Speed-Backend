@@ -1,8 +1,10 @@
+# render.yaml
 services:
   - type: web
     name: bitespeed-task
     env: node
     plan: free
+    # This is corrected 
     buildCommand: "npm install && npx prisma migrate deploy && npm run build"
     startCommand: "node dist/index.js"
     envVars:
